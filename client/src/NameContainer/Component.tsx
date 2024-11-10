@@ -4,8 +4,10 @@ export default function NameContainer() {
     return (
         <>
         <div className="namecontainer">
-            <h2>Aku Lehtola</h2>
-            <h4>placeholder</h4>
+            <div className="texts">
+                <h2>Aku Lehtola</h2>
+                <h4>self-taught software developer</h4>
+            </div>
         </div>
         </>
     )
