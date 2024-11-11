@@ -11,8 +11,12 @@
 }
 
 .texts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
     width: 16rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 h2, h4 {
