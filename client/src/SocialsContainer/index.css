@@ -1,0 +1,80 @@
+.socialscontainer {
+    width: 18rem;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.row {
+    margin: 0.3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.email {
+    width: 100%;
+    height: 75%;
+    border: none;
+    outline: 1px solid #63636359;
+    border-radius: 8px;
+    background-color: #fefcff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    color: #fff;
+    background-color: rgb(46, 135, 236);
+    height: 100%;
+    width: 20%;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.address {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.github {
+    color: #171515;
+}
+
+.linkedin {
+    color: #0077B5;
+}
