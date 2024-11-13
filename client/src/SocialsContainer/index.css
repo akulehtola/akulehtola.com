@@ -6,6 +6,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
+    margin: 0.5rem;
 }
 
 .row {
@@ -37,7 +38,7 @@
     margin-left: auto;
     margin-right: 0;
     color: #fff;
-    background-color: rgb(46, 135, 236);
+    background-color: rgb(55, 126, 207);
     height: 100%;
     width: 20%;
     border-radius: 0px 8px 8px 0px;
