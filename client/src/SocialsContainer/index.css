@@ -21,10 +21,9 @@
 .email {
     width: 100%;
     height: 75%;
-    border: none;
-    outline: 1px solid #63636359;
+    border: 1px solid #63636359;
     border-radius: 8px;
-    background-color: #fefcff;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +35,20 @@
     justify-content: center;
     align-items: center;
     margin-left: auto;
-    margin-right: 0;
-    color: #fff;
-    background-color: rgb(55, 126, 207);
+    color: #000;
+    background-color: #fff;
+    border-left: 1px solid #63636359;
     height: 100%;
     width: 20%;
     border-radius: 0px 8px 8px 0px;
     font-size: 1.2rem;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.send:hover {
+    background-color: #e7e7e7;
+    transition-duration: 0.3s;
 }
 
 .address {
@@ -73,9 +78,9 @@
 }
 
 .github {
-    color: #171515;
+    color: #131313;
 }
 
 .linkedin {
-    color: #0077B5;
+    color: #131313;
 }

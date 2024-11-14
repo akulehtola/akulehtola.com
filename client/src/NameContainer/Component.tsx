@@ -23,9 +23,9 @@ export default function NameContainer() {
     return (
         <>
         <div className="namecontainer">
-            <div className="texts">
-                <h2>Aku Lehtola</h2>
-                <h4>{age}</h4>
+            <div className="text">
+                <h2 className="n">Aku Lehtola</h2>
+                <h4 className="n">{age}</h4>
             </div>
         </div>
         </>

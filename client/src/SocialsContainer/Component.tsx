@@ -1,4 +1,4 @@
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import './index.css'
@@ -8,6 +8,7 @@ function handleSend():void {
 }
 
 export default function SocialsContainer() {
+    // REMEMBER TO SPLIT MAIL AND SOCIALS INTO DIFFERENT CARDS
     return (
         <>
         <div className="socialscontainer">
@@ -21,7 +22,7 @@ export default function SocialsContainer() {
                         <FontAwesomeIcon icon={faGithub} />
                     </button>
                     <button className="btn linkedin">
-                        <FontAwesomeIcon icon={faLinkedinIn} />
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </button>
                 </div>
                 

@@ -7,7 +7,7 @@ import AboutMeContainer from './AboutMeContainer/Component'
 
 createRoot(document.getElementById('root')!).render(
     <div className="mainContainer">
-      <ProfilePictureContainer/>
+      <ProfilePictureContainer />
       <NameContainer />
       <SocialsContainer />
       <AboutMeContainer />
