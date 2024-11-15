@@ -11,11 +11,35 @@ body, html {
     font-family: 'Lato', sans-serif;
 }
 
-.mainContainer {
-    width: 800px;
+.main-container {
+    width: 38rem;
     height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+}
+
+.f {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+.s {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
 }

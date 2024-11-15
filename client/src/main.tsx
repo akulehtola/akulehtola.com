@@ -6,10 +6,14 @@ import SocialsContainer from './SocialsContainer/Component'
 import AboutMeContainer from './AboutMeContainer/Component'
 
 createRoot(document.getElementById('root')!).render(
-    <div className="mainContainer">
-      <ProfilePictureContainer />
-      <NameContainer />
-      <SocialsContainer />
-      <AboutMeContainer />
+    <div className="main-container">
+      <div className="f">
+        <ProfilePictureContainer />
+        <NameContainer />
+      </div>
+      <div className="s">
+        <SocialsContainer />
+        <AboutMeContainer />
+      </div>
     </div>
 )
