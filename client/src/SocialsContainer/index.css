@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .socialscontainer {
     width: 18rem;
     height: 3rem;
@@ -7,4 +9,29 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    
+}
+
+.m {
+    width: 8rem;
+    height: 70%;
+    line-height: 70%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #0547f3;
+    color: #fff;
+    margin-left: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    transition-duration: 0.3s;
+}
+
+.m:hover {
+    background-color: #033ac7;
+    transition-duration: 0.3s;
 }
