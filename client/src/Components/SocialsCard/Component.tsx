@@ -1,17 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import './index.css'
-
-function handleContact():void {
-    window.open("mailto:me@akulehtola.com")
-}
-
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export default function SocialsCard() {
     return (
         <>
         <div className="socialscard">
-            <button className="m" onClick={handleContact}>Contact me&nbsp;<FontAwesomeIcon icon={faEnvelope} /></button>
+            <button className="m" onClick={() => {window.open("mailto:me@akulehtola.com")}}>Contact me&nbsp;<FontAwesomeIcon icon={faEnvelope} /></button>
+            <button className="x" onClick={() => {window.open("https://github.com/akulehtola")}}><FontAwesomeIcon icon={faGithub} /></button>
+            <button className="x"><FontAwesomeIcon icon={faLinkedin} /></button>
         </div>
         </>
     )

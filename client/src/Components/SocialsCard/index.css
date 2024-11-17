@@ -36,3 +36,17 @@
     background-color: #033ac7;
     transition-duration: 0.3s;
 }
+
+.x {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 70%;
+    width: 2rem;
+    font-size: 2rem;
+    margin-left: 0.4rem;
+    cursor: pointer;
+}
