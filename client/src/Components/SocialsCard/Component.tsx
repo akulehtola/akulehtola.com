@@ -7,10 +7,10 @@ function handleContact():void {
 }
 
 
-export default function SocialsContainer() {
+export default function SocialsCard() {
     return (
         <>
-        <div className="socialscontainer">
+        <div className="socialscard">
             <button className="m" onClick={handleContact}>Contact me&nbsp;<FontAwesomeIcon icon={faEnvelope} /></button>
         </div>
         </>

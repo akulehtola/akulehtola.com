@@ -1,10 +1,10 @@
 import './index.css'
 import picture from './profilepicture.jpg'
 
-export default function ProfilePictureContainer() {
+export default function ProfilePictureCard() {
     return (
         <>
-        <div className="picturecontainer">
+        <div className="picturecard">
             <img src={picture} />
         </div>
         </>

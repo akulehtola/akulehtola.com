@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import './index.css'
 
-export default function NameContainer() {
+export default function NameCard() {
     const [age, setAge] = useState()
     useEffect(() => {
         fetch("http://localhost:5173/src/api/age.json")
@@ -22,7 +22,7 @@ export default function NameContainer() {
     }, [])
     return (
         <>
-        <div className="namecontainer">
+        <div className="namecard">
             <div className="text">
                 <h2 className="n">Aku Lehtola</h2>
                 <h4 className="n">{age}</h4>

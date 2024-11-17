@@ -1,8 +1,8 @@
 import './index.css'
 
-export default function AboutMeContainer() {
+export default function AboutMeCard() {
     return (
-        <div className="aboutmecontainer">
+        <div className="aboutmecard">
             <div className="t">
                 <h2 className="h">About me</h2>
             </div>
