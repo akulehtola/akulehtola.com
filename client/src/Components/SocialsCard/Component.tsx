@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import './index.css'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import './index.css'
+
 
 export default function SocialsCard() {
     return (
