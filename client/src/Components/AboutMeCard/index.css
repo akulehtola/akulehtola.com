@@ -18,3 +18,18 @@
     margin: 1rem;
     color: #000;
 }
+
+.textbox {
+    width: 80%;
+    height: 16rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: start;
+}
+
+.y {
+    margin: 0;
+    height: 90%;
+    word-break: break-all;
+    overflow: hidden;
+}
