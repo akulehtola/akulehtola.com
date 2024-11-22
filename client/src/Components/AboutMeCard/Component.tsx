@@ -5,26 +5,14 @@ import './index.css'
 
 
 export default function AboutMeCard() {
-    const [aboutme, setAboutme] = useState<string | React.JSX.Element>("");
+    const [about, setAbout] = useState<string | React.JSX.Element>("");
     useEffect(() => {
-        const errText: string = "Error loading the about me text";
+        const errText: string = "Error loading the text";
         const err: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> {errText}</>
-        fetch("http://localhost:5173/src/api/aboutme.json")
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("invalid response");
-            }
-        })
-        .then((data) => {
-            const b: string = data.aboutme;
-            setAboutme(b)
-        })
-        .catch((error) => {
-            console.error(error)
-            setAboutme(err)
-        })
+        fetch("http://localhost:5173/src/api/about.json")
+        .then((response) => response.json())
+        .then((data) => setAbout(data.about))
+        .catch(() => setAbout(err))
     })
     return (
         <div className="aboutmecard">
@@ -32,7 +20,7 @@ export default function AboutMeCard() {
                 <h2 className="h">About me</h2>
             </div>
             <div className="textbox">
-                <h4 className="y">{aboutme}</h4>
+                <h4 className="y">{about}</h4>
             </div>
         </div>
     )

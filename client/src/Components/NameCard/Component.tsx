@@ -5,27 +5,14 @@ import './index.css'
 
 
 export default function NameCard() {
-    
     const [text, setText] = useState<string | React.JSX.Element>("");
     useEffect(() => {
         const errText: string = "Error loading the text";
         const err: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> {errText}</>
-        fetch("http://localhost:5173/src/api/text.json")
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("invalid response")
-            }
-        })
-        .then((data) => {
-            const a = data.text;
-            setText(a)
-        })
-        .catch((error) => {
-            console.error(error)
-            setText(err)
-        })
+        fetch("http://localhost:5173/src/api/me.json")
+        .then((response) => response.json())
+        .then((data) => setText(data.me))
+        .catch(() => setText(err))
     }, [])
     return (
         <>
