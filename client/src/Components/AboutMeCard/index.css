@@ -33,3 +33,15 @@
     word-break: break-all;
     overflow: hidden;
 }
+
+.ref-div {
+    height: 90%;
+    overflow: hidden;
+}
+
+.read-more {
+    border: none;
+    background-color: transparent;
+    color: #0547f3;
+    cursor: pointer;
+}
