@@ -45,3 +45,20 @@
     color: #0547f3;
     cursor: pointer;
 }
+
+.expanded-card {
+    width: 40rem;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    position: fixed;
+}
+
+@media(max-width: 768px) {
+    .expanded-card {
+        width: 90%;
+        height: 90%;
+    }
+}

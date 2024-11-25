@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.css'
@@ -10,6 +10,7 @@ const AboutMeText = () => {
     const [isTruncated, setIsTruncated] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+    
     
     useEffect(() => {
         const errText: string = "Error loading the text";
@@ -35,9 +36,18 @@ const AboutMeText = () => {
                 <div className="read-more" onClick={() => setIsExpanded(true)}>Read more</div>
             )}
             {isExpanded && (
-                ReactDOM.createPortal(<button onClick={() => setIsExpanded(false)}>Close</button>, document.body)
+                ReactDOM.createPortal(<ExpandedAboutMe setIsExpanded={setIsExpanded}/>, document.body)
             )}
         </>
+    )
+}
+
+
+function ExpandedAboutMe({setIsExpanded}:{setIsExpanded: Dispatch<SetStateAction<boolean>>}) {
+    return (
+        <div className="expanded-card">
+            <button onClick={() => setIsExpanded(false)}>Close</button>
+        </div>
     )
 }
 
