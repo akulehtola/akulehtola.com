@@ -4,7 +4,6 @@
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    margin-top: 0.5rem;
 }
 
 .t {
@@ -30,7 +29,7 @@
 .y {
     margin: 0;
     height: 90%;
-    word-break: break-all;
+    overflow-wrap: break-word;
     overflow: hidden;
 }
 

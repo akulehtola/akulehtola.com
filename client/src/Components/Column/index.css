@@ -1,0 +1,14 @@
+.column {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}

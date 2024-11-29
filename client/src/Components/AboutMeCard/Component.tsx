@@ -2,51 +2,57 @@ import ReactDOM from 'react-dom';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useFetch from '../../hooks/useFetch';
 import './index.css'
 
 
 const AboutMeText = () => {
-    const [about, setAbout] = useState<string | React.JSX.Element>("");
     const [isTruncated, setIsTruncated] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    
-    
-    useEffect(() => {
-        const errText: string = "Error loading the text";
-        const err: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> {errText}</>
-        fetch("http://localhost:5173/src/api/about.json")
-        .then((response) => response.json())
-        .then((data) => setAbout(data.about))
-        .catch(() => setAbout(err))
-    }, [ref])
+
+    const errText: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> Error loading about me</>
+    const {text, err} = useFetch("http://localhost:5173/src/api/about.json", errText);
 
     useEffect(() => {
         const div = ref.current;
         if (div) {
             setIsTruncated(div.scrollHeight > div.clientHeight)
         }
+    }, [text])
 
-    }, [ref, about])
+    
 
     return (
         <>
-            <div className="ref-div" ref={ref}>{about}</div>
+            <div className="ref-div" ref={ref}>
+                {text}
+                {err && (err)}
+            </div>
             {isTruncated && (
                 <div className="read-more" onClick={() => setIsExpanded(true)}>Read more</div>
             )}
             {isExpanded && (
-                ReactDOM.createPortal(<ExpandedAboutMe setIsExpanded={setIsExpanded}/>, document.body)
+                ReactDOM.createPortal(<ExpandedAboutMe setIsExpanded={setIsExpanded} text={text} err={err}/>, document.body)
             )}
         </>
     )
 }
 
+type E = {
+    setIsExpanded: Dispatch<SetStateAction<boolean>>,
+    text: string | undefined,
+    err: React.JSX.Element | undefined
+}
 
-function ExpandedAboutMe({setIsExpanded}:{setIsExpanded: Dispatch<SetStateAction<boolean>>}) {
+function ExpandedAboutMe({text, err, setIsExpanded}: E) {
     return (
         <div className="expanded-card">
             <button onClick={() => setIsExpanded(false)}>Close</button>
+            <div style={{width: "80%", marginLeft: "1rem"}}>
+                {text}
+                {err && (err)}
+            </div>
         </div>
     )
 }
