@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faTriangleExclamation, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useFetch from '../../hooks/useFetch';
 import './index.css'
-
 
 const AboutMeText = () => {
     const [isTruncated, setIsTruncated] = useState(false);
@@ -20,8 +19,6 @@ const AboutMeText = () => {
             setIsTruncated(div.scrollHeight > div.clientHeight)
         }
     }, [text])
-
-    
 
     return (
         <>
@@ -48,15 +45,14 @@ type E = {
 function ExpandedAboutMe({text, err, setIsExpanded}: E) {
     return (
         <div className="expanded-card">
-            <button onClick={() => setIsExpanded(false)}>Close</button>
-            <div style={{width: "80%", marginLeft: "1rem"}}>
+            <button className="close-btn" onClick={() => setIsExpanded(false)}><FontAwesomeIcon icon={faXmark} /></button>
+            <div style={{width: "80%", marginLeft: "0.5rem"}}>
                 {text}
                 {err && (err)}
             </div>
         </div>
     )
 }
-
 
 export default function AboutMeCard() {
     return (
