@@ -5,14 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useFetch from '../../hooks/useFetch';
 import './index.css'
 
+type E = {
+    setIsExpanded: Dispatch<SetStateAction<boolean>>,
+    text: string | undefined
+}
+
 const AboutMeText = () => {
     const [isTruncated, setIsTruncated] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
+    const {text} = useFetch("http://localhost:5173/src/api/about.json");
     const errText: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> Error loading about me</>
-    const {text, err} = useFetch("http://localhost:5173/src/api/about.json", errText);
-
+    
     useEffect(() => {
         const div = ref.current;
         if (div) {
@@ -23,32 +28,24 @@ const AboutMeText = () => {
     return (
         <>
             <div className="ref-div" ref={ref}>
-                {text}
-                {err && (err)}
+                {text ? text : errText}
             </div>
             {isTruncated && (
                 <div className="read-more" onClick={() => setIsExpanded(true)}>Read more</div>
             )}
             {isExpanded && (
-                ReactDOM.createPortal(<ExpandedAboutMe setIsExpanded={setIsExpanded} text={text} err={err}/>, document.body)
+                ReactDOM.createPortal(<ExpandedAboutMe setIsExpanded={setIsExpanded} text={text}/>, document.body)
             )}
         </>
     )
 }
 
-type E = {
-    setIsExpanded: Dispatch<SetStateAction<boolean>>,
-    text: string | undefined,
-    err: React.JSX.Element | undefined
-}
-
-function ExpandedAboutMe({text, err, setIsExpanded}: E) {
+function ExpandedAboutMe({text, setIsExpanded}: E) {
     return (
         <div className="expanded-card">
             <button className="close-btn" onClick={() => setIsExpanded(false)}><FontAwesomeIcon icon={faXmark} /></button>
             <div style={{width: "80%", marginLeft: "0.5rem"}}>
                 {text}
-                {err && (err)}
             </div>
         </div>
     )
