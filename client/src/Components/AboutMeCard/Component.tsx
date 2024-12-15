@@ -15,7 +15,7 @@ const AboutMeText = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-    const {text} = useFetch("http://localhost:5173/src/api/about.json");
+    const {text} = useFetch("/api/about");
     const errText: React.JSX.Element = <><FontAwesomeIcon icon={faTriangleExclamation}/> Error loading about me</>
     
     useEffect(() => {

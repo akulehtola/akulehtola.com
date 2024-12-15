@@ -1,5 +1,5 @@
 import './index.css'
-import picture from './profilepicture.jpg'
+import picture from './me.jpg'
 
 export default function ProfilePictureCard() {
     return (

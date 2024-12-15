@@ -1,4 +1,6 @@
 src/api/
+src/Components/ProfilePictureCard/me.jpg
+public/me.jpg
 node_modules/
 dist/
 dist-ssr/
