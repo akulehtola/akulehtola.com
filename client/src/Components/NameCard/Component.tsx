@@ -7,7 +7,7 @@ export default function NameCard() {
             <div className="text">
                 <h2 className="n">Aku Lehtola</h2>
                 <h4 className="n">
-                    software developer and sysadmin
+                    self-taught software developer
                 </h4>
             </div>
         </div>
