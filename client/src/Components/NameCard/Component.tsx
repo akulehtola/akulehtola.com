@@ -1,14 +1,12 @@
-import './index.css'
+import styles from './component.module.css'
 
 export default function NameCard() {
     return (
         <>
-        <div className="namecard">
-            <div className="text">
-                <h2 className="n">Aku Lehtola</h2>
-                <h4 className="n">
-                    self-taught software developer
-                </h4>
+        <div className={styles.card}>
+            <div className={styles.text}>
+                <h2 className={styles.content}>Aku Lehtola</h2>
+                <h4 className={styles.content}>self-taught software developer</h4>
             </div>
         </div>
         </>

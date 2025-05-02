@@ -11,3 +11,39 @@ body {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
 }
+
+.main-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.column {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: auto;
+    height: auto;
+    margin: 0.5rem;
+}
+
+@media(max-width: 767px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .column {
+        width: 100%;
+    }
+}

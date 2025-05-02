@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.socialscard {
+.card {
     width: 18rem;
     height: 3rem;
     background-color: #fff;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.m {
+.contact {
     width: 8rem;
     height: 70%;
     line-height: 70%;
@@ -30,12 +30,12 @@
     cursor: pointer;
 }
 
-.m:hover {
+.contact:hover {
     background-color: #033ac7;
     transition-duration: 0.3s;
 }
 
-.x {
+.socials {
     border: none;
     outline: none;
     display: flex;

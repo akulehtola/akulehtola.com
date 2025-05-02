@@ -1,0 +1,57 @@
+.card {
+    width: 18rem;
+    height: 20rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.head {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-radius: 12px;
+    width: 90%;
+    height: 15rem;
+    flex-wrap: wrap;
+}
+
+.iconcontainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    height: 3rem;
+    width: 60%;
+    font-size: 1.5rem;
+}
+
+.icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.text {
+    font-size: 16px;
+    margin-left: 8px;
+    font-family: "Inter", sans-serif;
+}
