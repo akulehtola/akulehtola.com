@@ -6,7 +6,7 @@ export default function NameCard() {
         <div className={styles.card}>
             <div className={styles.text}>
                 <h2 className={styles.content}>Aku Lehtola</h2>
-                <h4 className={styles.content}>self-taught software developer</h4>
+                <h4 className={styles.content}>self-taught software developer from Southwest Finland</h4>
             </div>
         </div>
         </>
