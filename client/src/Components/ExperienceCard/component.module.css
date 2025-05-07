@@ -15,3 +15,29 @@
 .title {
     margin: 1rem;
 }
+
+.content {
+    margin-top: 1rem;
+}
+
+.company {
+    font-size: 20px;
+    margin: 0 16px;
+    font-weight: 400;
+}
+
+.description {
+    margin: 0 24px;
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.line {
+    display: block;
+    border: 1px solid #808080;
+    width: 50%;
+    margin: 0 1rem;
+}
