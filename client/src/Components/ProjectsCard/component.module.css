@@ -61,7 +61,7 @@
     text-align: center;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: 6rem;
