@@ -38,20 +38,34 @@
     align-items: center;
     border: 1px solid #a0a0a0;
     border-radius: 8px;
-    height: 3rem;
-    width: 60%;
+    height: 4.3rem;
+    width: 100%;
     font-size: 1.5rem;
 }
 
 .icon {
     height: 2.5rem;
     width: 2.5rem;
+    margin-left: 8px;
     border-radius: 4px;
-    margin-left: 4px;
+    overflow: hidden;
+}
+
+.langIcon {
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.language {
+    font-size: 20px;
+    margin: 0 8px;
+    font-family: "Inter", sans-serif;
 }
 
 .text {
-    font-size: 16px;
-    margin-left: 8px;
+    font-size: 12px;
+    margin: 0 8px;
     font-family: "Inter", sans-serif;
 }
