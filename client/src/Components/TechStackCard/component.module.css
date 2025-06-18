@@ -69,3 +69,8 @@
     margin: 0 8px;
     font-family: "Inter", sans-serif;
 }
+
+.t {
+    display: flex;
+    flex-direction: column;
+}
